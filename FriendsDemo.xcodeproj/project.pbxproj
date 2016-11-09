@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6141A3EF1DD323CA00372007 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A3EE1DD323CA00372007 /* main.m */; };
+		6141A3F21DD323CA00372007 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A3F11DD323CA00372007 /* AppDelegate.m */; };
+		6141A3F81DD323CA00372007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6141A3F61DD323CA00372007 /* Main.storyboard */; };
+		6141A3FB1DD323CA00372007 /* FriendsDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6141A3F91DD323CA00372007 /* FriendsDemo.xcdatamodeld */; };
+		6141A3FD1DD323CA00372007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6141A3FC1DD323CA00372007 /* Assets.xcassets */; };
+		6141A4001DD323CA00372007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6141A3FE1DD323CA00372007 /* LaunchScreen.storyboard */; };
+		6141A40B1DD323CA00372007 /* FriendsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A40A1DD323CA00372007 /* FriendsDemoTests.m */; };
+		6141A41B1DD32A5C00372007 /* FDASavedDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A41A1DD32A5C00372007 /* FDASavedDataManager.m */; };
+		6141A41C1DD32A5C00372007 /* FDASavedDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A41A1DD32A5C00372007 /* FDASavedDataManager.m */; };
+		6141A42A1DD33FD400372007 /* FDAFriend+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A4271DD33FD400372007 /* FDAFriend+CoreDataClass.m */; };
+		6141A42B1DD33FD400372007 /* FDAFriend+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A4271DD33FD400372007 /* FDAFriend+CoreDataClass.m */; };
+		6141A42C1DD33FD400372007 /* FDAFriend+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A4291DD33FD400372007 /* FDAFriend+CoreDataProperties.m */; };
+		6141A42D1DD33FD400372007 /* FDAFriend+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A4291DD33FD400372007 /* FDAFriend+CoreDataProperties.m */; };
+		6141A4301DD34D6200372007 /* FDADataFetchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A42F1DD34D6200372007 /* FDADataFetchManager.m */; };
+		6141A4311DD34D6200372007 /* FDADataFetchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A42F1DD34D6200372007 /* FDADataFetchManager.m */; };
+		7C61D0E0BDDC654612CE5733 /* libPods-FriendsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CC0FBFD2E13EE2EACD216C /* libPods-FriendsDemo.a */; };
+		C940042DA5249B425D60E3DB /* libPods-FriendsDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACF2A1D7571E3A0BD7B795F /* libPods-FriendsDemoTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6141A4071DD323CA00372007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6141A3E21DD323CA00372007 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6141A3E91DD323CA00372007;
+			remoteInfo = FriendsDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EAF750F91CF227F7ED3BA17 /* Pods-FriendsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsDemoTests/Pods-FriendsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5ACF2A1D7571E3A0BD7B795F /* libPods-FriendsDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendsDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6141A3EA1DD323CA00372007 /* FriendsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6141A3EE1DD323CA00372007 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6141A3F01DD323CA00372007 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6141A3F11DD323CA00372007 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6141A3F71DD323CA00372007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6141A3FA1DD323CA00372007 /* FriendsDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FriendsDemo.xcdatamodel; sourceTree = "<group>"; };
+		6141A3FC1DD323CA00372007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6141A3FF1DD323CA00372007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6141A4011DD323CA00372007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6141A4061DD323CA00372007 /* FriendsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6141A40A1DD323CA00372007 /* FriendsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsDemoTests.m; sourceTree = "<group>"; };
+		6141A40C1DD323CA00372007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6141A4191DD32A5C00372007 /* FDASavedDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDASavedDataManager.h; path = FDAModel/FDASavedDataManager/FDASavedDataManager.h; sourceTree = "<group>"; };
+		6141A41A1DD32A5C00372007 /* FDASavedDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDASavedDataManager.m; path = FDAModel/FDASavedDataManager/FDASavedDataManager.m; sourceTree = "<group>"; };
+		6141A4261DD33FD400372007 /* FDAFriend+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FDAFriend+CoreDataClass.h"; path = "FDAModel/FDASavedDataManager/FDAEntities/FDAFriend+CoreDataClass.h"; sourceTree = "<group>"; };
+		6141A4271DD33FD400372007 /* FDAFriend+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FDAFriend+CoreDataClass.m"; path = "FDAModel/FDASavedDataManager/FDAEntities/FDAFriend+CoreDataClass.m"; sourceTree = "<group>"; };
+		6141A4281DD33FD400372007 /* FDAFriend+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FDAFriend+CoreDataProperties.h"; path = "FDAModel/FDASavedDataManager/FDAEntities/FDAFriend+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6141A4291DD33FD400372007 /* FDAFriend+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FDAFriend+CoreDataProperties.m"; path = "FDAModel/FDASavedDataManager/FDAEntities/FDAFriend+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6141A42E1DD34D6200372007 /* FDADataFetchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDADataFetchManager.h; path = FDAModel/FDADataFetchManager/FDADataFetchManager.h; sourceTree = "<group>"; };
+		6141A42F1DD34D6200372007 /* FDADataFetchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDADataFetchManager.m; path = FDAModel/FDADataFetchManager/FDADataFetchManager.m; sourceTree = "<group>"; };
+		65CC0FBFD2E13EE2EACD216C /* libPods-FriendsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B857226EAC66787857679C4A /* Pods-FriendsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsDemo/Pods-FriendsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CE0C5670DC4FDCA837365628 /* Pods-FriendsDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsDemoTests/Pods-FriendsDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F16BF08ECB26C667AD18F795 /* Pods-FriendsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsDemo/Pods-FriendsDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6141A3E71DD323CA00372007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C61D0E0BDDC654612CE5733 /* libPods-FriendsDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6141A4031DD323CA00372007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C940042DA5249B425D60E3DB /* libPods-FriendsDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		005BC82CEBE9C9705F74D2F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65CC0FBFD2E13EE2EACD216C /* libPods-FriendsDemo.a */,
+				5ACF2A1D7571E3A0BD7B795F /* libPods-FriendsDemoTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6141A3E11DD323CA00372007 = {
+			isa = PBXGroup;
+			children = (
+				6141A3EC1DD323CA00372007 /* FriendsDemo */,
+				6141A4091DD323CA00372007 /* FriendsDemoTests */,
+				6141A3EB1DD323CA00372007 /* Products */,
+				C5CB26D07B1897CD3C3B77D1 /* Pods */,
+				005BC82CEBE9C9705F74D2F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6141A3EB1DD323CA00372007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6141A3EA1DD323CA00372007 /* FriendsDemo.app */,
+				6141A4061DD323CA00372007 /* FriendsDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6141A3EC1DD323CA00372007 /* FriendsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6141A4161DD3241400372007 /* FDAUserInterface */,
+				6141A4151DD323FB00372007 /* FDAModel */,
+				6141A3F01DD323CA00372007 /* AppDelegate.h */,
+				6141A3F11DD323CA00372007 /* AppDelegate.m */,
+				6141A3F61DD323CA00372007 /* Main.storyboard */,
+				6141A3FC1DD323CA00372007 /* Assets.xcassets */,
+				6141A3FE1DD323CA00372007 /* LaunchScreen.storyboard */,
+				6141A4011DD323CA00372007 /* Info.plist */,
+				6141A3ED1DD323CA00372007 /* Supporting Files */,
+			);
+			path = FriendsDemo;
+			sourceTree = "<group>";
+		};
+		6141A3ED1DD323CA00372007 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6141A3EE1DD323CA00372007 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6141A4091DD323CA00372007 /* FriendsDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6141A40A1DD323CA00372007 /* FriendsDemoTests.m */,
+				6141A40C1DD323CA00372007 /* Info.plist */,
+			);
+			path = FriendsDemoTests;
+			sourceTree = "<group>";
+		};
+		6141A4151DD323FB00372007 /* FDAModel */ = {
+			isa = PBXGroup;
+			children = (
+				6141A4181DD3289E00372007 /* FDADataFetchManager */,
+				6141A4171DD327F600372007 /* FDASavedDataManager */,
+			);
+			name = FDAModel;
+			sourceTree = "<group>";
+		};
+		6141A4161DD3241400372007 /* FDAUserInterface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FDAUserInterface;
+			sourceTree = "<group>";
+		};
+		6141A4171DD327F600372007 /* FDASavedDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				6141A41D1DD33E2D00372007 /* FDAEntities */,
+				6141A4191DD32A5C00372007 /* FDASavedDataManager.h */,
+				6141A41A1DD32A5C00372007 /* FDASavedDataManager.m */,
+				6141A3F91DD323CA00372007 /* FriendsDemo.xcdatamodeld */,
+			);
+			name = FDASavedDataManager;
+			sourceTree = "<group>";
+		};
+		6141A4181DD3289E00372007 /* FDADataFetchManager */ = {
+			isa = PBXGroup;
+			children = (
+				6141A42E1DD34D6200372007 /* FDADataFetchManager.h */,
+				6141A42F1DD34D6200372007 /* FDADataFetchManager.m */,
+			);
+			name = FDADataFetchManager;
+			sourceTree = "<group>";
+		};
+		6141A41D1DD33E2D00372007 /* FDAEntities */ = {
+			isa = PBXGroup;
+			children = (
+				6141A4261DD33FD400372007 /* FDAFriend+CoreDataClass.h */,
+				6141A4271DD33FD400372007 /* FDAFriend+CoreDataClass.m */,
+				6141A4281DD33FD400372007 /* FDAFriend+CoreDataProperties.h */,
+				6141A4291DD33FD400372007 /* FDAFriend+CoreDataProperties.m */,
+			);
+			name = FDAEntities;
+			sourceTree = "<group>";
+		};
+		C5CB26D07B1897CD3C3B77D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B857226EAC66787857679C4A /* Pods-FriendsDemo.debug.xcconfig */,
+				F16BF08ECB26C667AD18F795 /* Pods-FriendsDemo.release.xcconfig */,
+				1EAF750F91CF227F7ED3BA17 /* Pods-FriendsDemoTests.debug.xcconfig */,
+				CE0C5670DC4FDCA837365628 /* Pods-FriendsDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6141A3E91DD323CA00372007 /* FriendsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6141A40F1DD323CA00372007 /* Build configuration list for PBXNativeTarget "FriendsDemo" */;
+			buildPhases = (
+				E16927D594D21E32723DAF75 /* [CP] Check Pods Manifest.lock */,
+				6141A3E61DD323CA00372007 /* Sources */,
+				6141A3E71DD323CA00372007 /* Frameworks */,
+				6141A3E81DD323CA00372007 /* Resources */,
+				2AAA46FDB56E5F6D8CA3E0E7 /* [CP] Embed Pods Frameworks */,
+				C29AA820496C8DA5BBA2AAF6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FriendsDemo;
+			productName = FriendsDemo;
+			productReference = 6141A3EA1DD323CA00372007 /* FriendsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6141A4051DD323CA00372007 /* FriendsDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6141A4121DD323CA00372007 /* Build configuration list for PBXNativeTarget "FriendsDemoTests" */;
+			buildPhases = (
+				ED1DA7C1DEF04C0C37582321 /* [CP] Check Pods Manifest.lock */,
+				6141A4021DD323CA00372007 /* Sources */,
+				6141A4031DD323CA00372007 /* Frameworks */,
+				6141A4041DD323CA00372007 /* Resources */,
+				B3B0B3EB29DA892E7376E422 /* [CP] Embed Pods Frameworks */,
+				46ED431E05815020585A29B3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6141A4081DD323CA00372007 /* PBXTargetDependency */,
+			);
+			name = FriendsDemoTests;
+			productName = FriendsDemoTests;
+			productReference = 6141A4061DD323CA00372007 /* FriendsDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6141A3E21DD323CA00372007 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "CuriousIT LLC";
+				TargetAttributes = {
+					6141A3E91DD323CA00372007 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AMG5752JL7;
+						ProvisioningStyle = Automatic;
+					};
+					6141A4051DD323CA00372007 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AMG5752JL7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6141A3E91DD323CA00372007;
+					};
+				};
+			};
+			buildConfigurationList = 6141A3E51DD323CA00372007 /* Build configuration list for PBXProject "FriendsDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6141A3E11DD323CA00372007;
+			productRefGroup = 6141A3EB1DD323CA00372007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6141A3E91DD323CA00372007 /* FriendsDemo */,
+				6141A4051DD323CA00372007 /* FriendsDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6141A3E81DD323CA00372007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6141A4001DD323CA00372007 /* LaunchScreen.storyboard in Resources */,
+				6141A3FD1DD323CA00372007 /* Assets.xcassets in Resources */,
+				6141A3F81DD323CA00372007 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6141A4041DD323CA00372007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AAA46FDB56E5F6D8CA3E0E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendsDemo/Pods-FriendsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46ED431E05815020585A29B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendsDemoTests/Pods-FriendsDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3B0B3EB29DA892E7376E422 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendsDemoTests/Pods-FriendsDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C29AA820496C8DA5BBA2AAF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendsDemo/Pods-FriendsDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E16927D594D21E32723DAF75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED1DA7C1DEF04C0C37582321 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6141A3E61DD323CA00372007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6141A3FB1DD323CA00372007 /* FriendsDemo.xcdatamodeld in Sources */,
+				6141A4301DD34D6200372007 /* FDADataFetchManager.m in Sources */,
+				6141A42A1DD33FD400372007 /* FDAFriend+CoreDataClass.m in Sources */,
+				6141A3F21DD323CA00372007 /* AppDelegate.m in Sources */,
+				6141A3EF1DD323CA00372007 /* main.m in Sources */,
+				6141A41B1DD32A5C00372007 /* FDASavedDataManager.m in Sources */,
+				6141A42C1DD33FD400372007 /* FDAFriend+CoreDataProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6141A4021DD323CA00372007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6141A40B1DD323CA00372007 /* FriendsDemoTests.m in Sources */,
+				6141A4311DD34D6200372007 /* FDADataFetchManager.m in Sources */,
+				6141A42B1DD33FD400372007 /* FDAFriend+CoreDataClass.m in Sources */,
+				6141A41C1DD32A5C00372007 /* FDASavedDataManager.m in Sources */,
+				6141A42D1DD33FD400372007 /* FDAFriend+CoreDataProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6141A4081DD323CA00372007 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6141A3E91DD323CA00372007 /* FriendsDemo */;
+			targetProxy = 6141A4071DD323CA00372007 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6141A3F61DD323CA00372007 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6141A3F71DD323CA00372007 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6141A3FE1DD323CA00372007 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6141A3FF1DD323CA00372007 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6141A40D1DD323CA00372007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6141A40E1DD323CA00372007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6141A4101DD323CA00372007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B857226EAC66787857679C4A /* Pods-FriendsDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AMG5752JL7;
+				INFOPLIST_FILE = FriendsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CUR.FriendsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6141A4111DD323CA00372007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F16BF08ECB26C667AD18F795 /* Pods-FriendsDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AMG5752JL7;
+				INFOPLIST_FILE = FriendsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CUR.FriendsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6141A4131DD323CA00372007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EAF750F91CF227F7ED3BA17 /* Pods-FriendsDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = AMG5752JL7;
+				INFOPLIST_FILE = FriendsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CUR.FriendsDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendsDemo.app/FriendsDemo";
+			};
+			name = Debug;
+		};
+		6141A4141DD323CA00372007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0C5670DC4FDCA837365628 /* Pods-FriendsDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = AMG5752JL7;
+				INFOPLIST_FILE = FriendsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CUR.FriendsDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendsDemo.app/FriendsDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6141A3E51DD323CA00372007 /* Build configuration list for PBXProject "FriendsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6141A40D1DD323CA00372007 /* Debug */,
+				6141A40E1DD323CA00372007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6141A40F1DD323CA00372007 /* Build configuration list for PBXNativeTarget "FriendsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6141A4101DD323CA00372007 /* Debug */,
+				6141A4111DD323CA00372007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6141A4121DD323CA00372007 /* Build configuration list for PBXNativeTarget "FriendsDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6141A4131DD323CA00372007 /* Debug */,
+				6141A4141DD323CA00372007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6141A3F91DD323CA00372007 /* FriendsDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6141A3FA1DD323CA00372007 /* FriendsDemo.xcdatamodel */,
+			);
+			currentVersion = 6141A3FA1DD323CA00372007 /* FriendsDemo.xcdatamodel */;
+			path = FriendsDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6141A3E21DD323CA00372007 /* Project object */;
+}
