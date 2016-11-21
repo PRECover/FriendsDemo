@@ -31,6 +31,6 @@
 
 - (BOOL) deleteFriend:(FDAFriend*)friendForDeleting; //note 1: I don't know why, but word "friend" marked as reserved.
 - (NSFetchedResultsController*)savedFriendsController;
-
+- (NSFetchRequest*) friendsFetchRequest;
 
 @end

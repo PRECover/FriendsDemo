@@ -7,8 +7,15 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <CoreData/CoreData.h>
+#import "FDASavedDataManager.h"
+
+#import "FDAFriend+CoreDataProperties.h"
+#import "FDAFriend+CoreDataClass.h"
 
 @interface FriendsDemoTests : XCTestCase
+
+@property (strong, nonatomic) NSDictionary* friendData;
 
 @end
 
@@ -16,6 +23,9 @@
 
 - (void)setUp {
     [super setUp];
+
+    self.friendData = @{@"firstName":@"Pedro",@"lastName":@"Testio",@"phone":@"+3227261632",@"email":@"testMail@example.com"};
+    
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -24,16 +34,59 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+- (void) testFriendInserting {
+    NSData* testPhotoData = [[NSData alloc] init];
+    XCTAssert([[FDASavedDataManager sharedInstance] insertNewFriendWithFirstName:self.friendData[@"firstName"]
+                                                                        lastName:self.friendData[@"lastName"]
+                                                                           eMail:self.friendData[@"email"]
+                                                                     phoneNumber:self.friendData[@"phone"]
+                                                                        andPhoto:testPhotoData], @"Data inserting");
+  
+    
+    
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void) testFriendFetching {
+    NSArray *fetchedFriends = [self fetchFriendsData];
+    XCTAssert([fetchedFriends count], @"Fetching filed");
+    XCTAssert([fetchedFriends count] > 1, @"Wrong friends count");
+    
+    id testFriend = [fetchedFriends lastObject];
+    
+    XCTAssert([testFriend isKindOfClass:[FDAFriend class]] , @"Fetched object is not FDAFriend");
+    
+    
 }
+
+- (NSArray*) fetchFriendsData {
+    NSFetchRequest *fetchRequest = [[FDASavedDataManager sharedInstance] friendsFetchRequest];
+    NSManagedObjectContext* context = [[FDASavedDataManager sharedInstance] backgroundContext];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    return fetchedObjects;
+
+}
+
+- (void) testCorrectingInput {
+    FDAFriend* testFriend = [[self fetchFriendsData] lastObject];
+    BOOL isCorrect = YES;
+    
+    if (![[testFriend firstName] isEqualToString:self.friendData[@"firstName"]]) { isCorrect = NO; }
+    if (![[testFriend lastName] isEqualToString:self.friendData[@"lastName"]]) { isCorrect = NO; }
+    if (![[testFriend phone] isEqualToString:self.friendData[@"phone"]]) { isCorrect = NO; }
+    if (![[testFriend eMail] isEqualToString:self.friendData[@"email"]]) { isCorrect = NO; }
+    
+    XCTAssert(isCorrect, @"Data correcting");
+    
+}
+- (void) testDataDeleting {
+    FDAFriend* testFriend = [[self fetchFriendsData] lastObject];
+    XCTAssert([[FDASavedDataManager sharedInstance] deleteFriend:testFriend], @"Friend deleting");
+    
+}
+
+
 
 @end

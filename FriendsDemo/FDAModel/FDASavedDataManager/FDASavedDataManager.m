@@ -181,6 +181,8 @@
         return NO;
     }
     else{
+        
+        NSLog(@"%@", [backgroundContext executeFetchRequest:[self friendsFetchRequest] error:nil]);
         return YES;
     }
     
@@ -204,21 +206,20 @@
     }
 }
 
-- (NSFetchedResultsController*)savedFriendsController{
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"FDAFriend" inManagedObjectContext:self.mainContext];
-    [fetchRequest setEntity:entity];
-    
+- (NSFetchRequest*) friendsFetchRequest {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"FDAFriend"];
     NSSortDescriptor *sort = [[NSSortDescriptor alloc]
                               initWithKey:@"lastName" ascending:NO];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", @"isFriend", YES];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %d", @"isFriend", YES];
     [fetchRequest setPredicate:predicate];
     
+    return fetchRequest;
+}
+
+- (NSFetchedResultsController*)savedFriendsController{
     NSFetchedResultsController *theFetchedResultsController =
-    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+    [[NSFetchedResultsController alloc] initWithFetchRequest:[self friendsFetchRequest]
                                         managedObjectContext:self.mainContext sectionNameKeyPath:nil
                                                    cacheName:@"Cache"];
   
