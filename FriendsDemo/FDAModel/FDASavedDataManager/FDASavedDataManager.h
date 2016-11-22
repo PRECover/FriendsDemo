@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/NSFetchedResultsController.h>
 
 @class FDAFriend;
 @class NSManagedObjectContext;

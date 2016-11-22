@@ -7,21 +7,102 @@
 //
 
 #import "FDATableViewController.h"
+#import "FDATableViewSavedRecordsModel.h"
+#import "FDATableFetchModel.h"
 
-@interface FDATableViewController ()
+@interface FDATableViewController () <FDATableViewSavedRecordsModelDelegate>
+
+@property (nonatomic, weak, readwrite) IBOutlet UITableView *usersTable;
+@property (nonatomic, strong) FDATableControllerAbstractModel* model;
 
 @end
 
 @implementation FDATableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _type = FDATableControllerSavedType;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupData];
+    [self setupTableView];
+    [self.model loadData];
+
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //[self.model loadData];
+}
+
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.model saveBeforeDissapearing];
+}
+
+- (void) setupTableView {
+    self.usersTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.usersTable.separatorColor = [UIColor whiteColor];
+    
+    self.usersTable.backgroundColor = [UIColor colorWithRed:0.518 green:0.016 blue:0.314 alpha:1.00];
+}
+
+- (void) setupNavigationBar {
+    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchItemAction:)];
+    self.navigationItem.rightBarButtonItem = searchItem;
+    
+}
+
+#pragma mark Logic setups
+
+- (void) setupData {
+    switch (self.type) {
+        case FDATableControllerSearcType:{
+            self.model = [[FDATableFetchModel alloc] initWithTableView:self.usersTable];
+            self.title = @"Searching";
+            
+            break;
+        }
+        
+        case FDATableControllerSavedType:{
+            FDATableViewSavedRecordsModel* model = [[FDATableViewSavedRecordsModel alloc] initWithTableView:self.usersTable];
+            model.delegate = self;
+            self.model = model;
+            self.title = @"Friends";
+            [self setupNavigationBar];
+            
+            break;
+        }
+    
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) searchItemAction:(UIBarButtonItem*)sender {
+    FDATableViewController* friendSearchTable = [self.storyboard instantiateViewControllerWithIdentifier:@"FDATableViewController"];
+    friendSearchTable.type = FDATableControllerSearcType;
+    
+    [self.navigationController pushViewController:friendSearchTable animated:YES];
+    
+}
+
+#pragma mark FDATableViewSavedRecordsModelDelegate protocol implementation
+
+- (void) FDA_friendDidSelected:(FDAFriend *)friendForEditing{
+    //TODO: - Push to FDAFriendEditVC
 }
 
 /*

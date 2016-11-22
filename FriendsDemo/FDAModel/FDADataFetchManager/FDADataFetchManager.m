@@ -14,26 +14,26 @@
 
 @implementation FDADataFetchManager
 
-- (AFURLSessionManager* ) p_urlSessionManagerWithContentTypes: (NSSet*)contentTypes {
+- (AFURLSessionManager* ) p_urlSessionManagerWithSerializer: (AFHTTPResponseSerializer*)serializer {
     NSURLSessionConfiguration *defaultConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager* manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:defaultConfig];
-    AFHTTPResponseSerializer *serializer = [AFHTTPResponseSerializer serializer];
-    serializer.acceptableContentTypes = contentTypes;
     manager.responseSerializer = serializer;
     
     return manager;
 }
 
 - (void) fetchUsersFromRemoteWithCompletion:(FDAFriendsFetchCompletion)completion {
-    AFURLSessionManager *manager = [self p_urlSessionManagerWithContentTypes:[NSSet setWithObjects:@"application/json", nil]];
-    NSURL *apiURL = [NSURL URLWithString:@"https://randomuser.me/api?results=20"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:apiURL];
+    AFURLSessionManager *manager = [self p_urlSessionManagerWithSerializer:[AFJSONResponseSerializer serializer]];
+    NSURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET"
+                                                                          URLString:@"https://randomuser.me/api"
+                                                                         parameters:@{@"results":@20}
+                                                                              error:nil];
     
     NSURLSessionTask *fetchingTask = [manager dataTaskWithRequest:request
                                                 completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
                                                 
-                                                    if([responseObject isKindOfClass:[NSArray class]]){
-                                                        completion(responseObject);
+                                                    if([responseObject[@"results"] isKindOfClass:[NSArray class]]){
+                                                        completion(responseObject[@"results"]);
                                                     }
                                                     
                                                 }];
@@ -42,7 +42,9 @@
 }
 
 - (void) downloadUserPhotoFromURL:(NSString*)photoURLstring withCompletion:(FDAImageDownloadingCompletion)completion{
-    AFURLSessionManager *manager = [self p_urlSessionManagerWithContentTypes:[NSSet setWithObjects:@"src/jpg", nil]];
+    AFHTTPResponseSerializer *serializer = [AFHTTPResponseSerializer serializer];
+    serializer.acceptableContentTypes = [NSSet setWithObject:@"src/jpg"];
+    AFURLSessionManager *manager = [self p_urlSessionManagerWithSerializer:serializer];
    
     NSURL *photoURL = [NSURL URLWithString:photoURLstring];
     NSURLRequest *request = [NSURLRequest requestWithURL:photoURL];

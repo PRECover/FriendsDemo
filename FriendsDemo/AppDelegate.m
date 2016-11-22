@@ -18,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:0.886 green:0.086 blue:0.400 alpha:1.00];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [UINavigationBar appearance].titleTextAttributes =  @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
     return YES;
 }
 
@@ -29,6 +34,8 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    [[FDASavedDataManager sharedInstance] saveMainContext];
+    
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }

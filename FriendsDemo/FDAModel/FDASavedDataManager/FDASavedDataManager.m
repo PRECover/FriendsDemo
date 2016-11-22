@@ -165,27 +165,40 @@
                              andPhoto:(NSData*)photoBinary{
     
     NSManagedObjectContext* backgroundContext = [self backgroundContext];
-    FDAFriend *newFriend = [[FDAFriend alloc] FDA_initWithContext:backgroundContext];
     
-    newFriend.firstName = firstName;
-    newFriend.lastName = lastName;
-    newFriend.eMail = mail;
-    newFriend.phone = phone;
-    newFriend.photo = photoBinary;
-    newFriend.isFriend = YES;
     
-    NSError *savingError;
-    if(![backgroundContext save:&savingError]){
-        //handle error
-        NSLog(@"Saving error. Object %@ was not saved", newFriend);
-        return NO;
-    }
-    else{
+    [backgroundContext performBlock:^{
         
-        NSLog(@"%@", [backgroundContext executeFetchRequest:[self friendsFetchRequest] error:nil]);
-        return YES;
-    }
+        
+        FDAFriend *newFriend = [[FDAFriend alloc] FDA_initWithContext:backgroundContext];
+        
+        newFriend.firstName = firstName;
+        newFriend.lastName = lastName;
+        newFriend.eMail = mail;
+        newFriend.phone = phone;
+        newFriend.photo = photoBinary;
+        newFriend.isFriend = YES;
+        
+        NSError *savingError;
+        if(![backgroundContext save:&savingError]){
+            //handle error
+            NSLog(@"Saving error. Object %@ was not saved", newFriend);
+            abort();        }
+        
+        [self.mainContext performBlock:^{
+            NSError* savingError;
+            if(![self.mainContext save:&savingError]) {
+                //handle error
+                NSLog(@"Saving error. Object %@ was not saved", newFriend);
+                abort();
+            }
+            
+        }];
+        
+
+    }];
     
+    return YES;
     
 }
 
@@ -195,15 +208,27 @@
     FDAFriend *friend = [backgroundContext objectWithID:friendForDeleting.objectID];
     friend.isFriend = false;
     
-    NSError *savingError;
-    if(![backgroundContext save:&savingError]){
-        //handle error
-        NSLog(@"Editing error. Changes in object %@ was not saved", friend);
-        return NO;
-    }
-    else{
-        return YES;
-    }
+    [backgroundContext performBlock:^{
+        NSError *savingError;
+        if(![backgroundContext save:&savingError]){
+            //handle error
+            NSLog(@"Editing error. Changes in object %@ was not saved", friend);
+            abort();
+        }
+        
+        
+        [self.mainContext performBlock:^{
+            NSError *savingError;
+            if(![self.mainContext save:&savingError]){
+                NSLog(@"Editing error. Changes in object %@ was not saved", friend);
+                abort();
+                
+            }
+        }];
+        
+    }];
+    
+    return YES;
 }
 
 - (NSFetchRequest*) friendsFetchRequest {

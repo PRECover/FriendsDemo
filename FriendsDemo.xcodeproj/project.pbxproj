@@ -20,10 +20,14 @@
 		6141A42D1DD33FD400372007 /* FDAFriend+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A4291DD33FD400372007 /* FDAFriend+CoreDataProperties.m */; };
 		6141A4301DD34D6200372007 /* FDADataFetchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A42F1DD34D6200372007 /* FDADataFetchManager.m */; };
 		6141A4311DD34D6200372007 /* FDADataFetchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6141A42F1DD34D6200372007 /* FDADataFetchManager.m */; };
+		615B3B7D1DE4877100C1C477 /* FDATableViewSavedRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B3B7C1DE4877100C1C477 /* FDATableViewSavedRecordsModel.m */; };
+		615B3B801DE49C9B00C1C477 /* FDATableFetchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B3B7F1DE49C9B00C1C477 /* FDATableFetchModel.m */; };
+		615B3B841DE4A93E00C1C477 /* FDATableControllerAbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B3B831DE4A93E00C1C477 /* FDATableControllerAbstractModel.m */; };
 		61DFD6061DE32A7E00CC157F /* FDAEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DFD6051DE32A7E00CC157F /* FDAEditViewController.m */; };
 		61DFD6091DE32ADA00CC157F /* FDATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DFD6081DE32ADA00CC157F /* FDATableViewController.m */; };
 		61DFD60F1DE32DFF00CC157F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DFD60D1DE32DFF00CC157F /* Main.storyboard */; };
 		61DFD6121DE32E0C00CC157F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DFD6101DE32E0C00CC157F /* LaunchScreen.storyboard */; };
+		61DFD6161DE32FE500CC157F /* FDATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DFD6151DE32FE500CC157F /* FDATableViewCell.m */; };
 		7C61D0E0BDDC654612CE5733 /* libPods-FriendsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CC0FBFD2E13EE2EACD216C /* libPods-FriendsDemo.a */; };
 		C940042DA5249B425D60E3DB /* libPods-FriendsDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACF2A1D7571E3A0BD7B795F /* libPods-FriendsDemoTests.a */; };
 /* End PBXBuildFile section */
@@ -42,7 +46,7 @@
 		1EAF750F91CF227F7ED3BA17 /* Pods-FriendsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsDemoTests/Pods-FriendsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5ACF2A1D7571E3A0BD7B795F /* libPods-FriendsDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendsDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6141A3EA1DD323CA00372007 /* FriendsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6141A3EE1DD323CA00372007 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6141A3EE1DD323CA00372007 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; wrapsLines = 1; };
 		6141A3F01DD323CA00372007 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6141A3F11DD323CA00372007 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6141A3FA1DD323CA00372007 /* FriendsDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FriendsDemo.xcdatamodel; sourceTree = "<group>"; };
@@ -59,12 +63,20 @@
 		6141A4291DD33FD400372007 /* FDAFriend+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FDAFriend+CoreDataProperties.m"; path = "FDAModel/FDASavedDataManager/FDAEntities/FDAFriend+CoreDataProperties.m"; sourceTree = "<group>"; };
 		6141A42E1DD34D6200372007 /* FDADataFetchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDADataFetchManager.h; path = FDAModel/FDADataFetchManager/FDADataFetchManager.h; sourceTree = "<group>"; };
 		6141A42F1DD34D6200372007 /* FDADataFetchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDADataFetchManager.m; path = FDAModel/FDADataFetchManager/FDADataFetchManager.m; sourceTree = "<group>"; };
+		615B3B7B1DE4877100C1C477 /* FDATableViewSavedRecordsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDATableViewSavedRecordsModel.h; path = FDAUserInterface/FDATableViewController/FDATableViewModel/FDATableViewSavedRecordsModel/FDATableViewSavedRecordsModel.h; sourceTree = "<group>"; };
+		615B3B7C1DE4877100C1C477 /* FDATableViewSavedRecordsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDATableViewSavedRecordsModel.m; path = FDAUserInterface/FDATableViewController/FDATableViewModel/FDATableViewSavedRecordsModel/FDATableViewSavedRecordsModel.m; sourceTree = "<group>"; };
+		615B3B7E1DE49C9B00C1C477 /* FDATableFetchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDATableFetchModel.h; path = FDAUserInterface/FDATableViewController/FDATableViewModel/FDATableFetchModel/FDATableFetchModel.h; sourceTree = "<group>"; };
+		615B3B7F1DE49C9B00C1C477 /* FDATableFetchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDATableFetchModel.m; path = FDAUserInterface/FDATableViewController/FDATableViewModel/FDATableFetchModel/FDATableFetchModel.m; sourceTree = "<group>"; };
+		615B3B821DE4A93E00C1C477 /* FDATableControllerAbstractModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDATableControllerAbstractModel.h; path = FDAUserInterface/FDATableViewController/FDATableViewModel/FDATableControllerAbstractModel.h; sourceTree = "<group>"; };
+		615B3B831DE4A93E00C1C477 /* FDATableControllerAbstractModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDATableControllerAbstractModel.m; path = FDAUserInterface/FDATableViewController/FDATableViewModel/FDATableControllerAbstractModel.m; sourceTree = "<group>"; };
 		61DFD6041DE32A7E00CC157F /* FDAEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDAEditViewController.h; path = FDAUserInterface/FDAEditViewController/FDAEditViewController.h; sourceTree = "<group>"; };
 		61DFD6051DE32A7E00CC157F /* FDAEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDAEditViewController.m; path = FDAUserInterface/FDAEditViewController/FDAEditViewController.m; sourceTree = "<group>"; };
 		61DFD6071DE32ADA00CC157F /* FDATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDATableViewController.h; path = FDAUserInterface/FDATableViewController/FDATableViewController.h; sourceTree = "<group>"; };
 		61DFD6081DE32ADA00CC157F /* FDATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDATableViewController.m; path = FDAUserInterface/FDATableViewController/FDATableViewController.m; sourceTree = "<group>"; };
 		61DFD60E1DE32DFF00CC157F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61DFD6111DE32E0C00CC157F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61DFD6141DE32FE500CC157F /* FDATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDATableViewCell.h; path = FDAUserInterface/FDATableViewController/FDATableViewCell/FDATableViewCell.h; sourceTree = "<group>"; };
+		61DFD6151DE32FE500CC157F /* FDATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDATableViewCell.m; path = FDAUserInterface/FDATableViewController/FDATableViewCell/FDATableViewCell.m; sourceTree = "<group>"; };
 		65CC0FBFD2E13EE2EACD216C /* libPods-FriendsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B857226EAC66787857679C4A /* Pods-FriendsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsDemo/Pods-FriendsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		CE0C5670DC4FDCA837365628 /* Pods-FriendsDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsDemoTests/Pods-FriendsDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +213,35 @@
 			name = FDAEntities;
 			sourceTree = "<group>";
 		};
+		615B3B771DE4855F00C1C477 /* FDATableViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				615B3B791DE4859400C1C477 /* FDATableSavedRecordsModel */,
+				615B3B781DE4857900C1C477 /* FDATableFetchModel */,
+				615B3B821DE4A93E00C1C477 /* FDATableControllerAbstractModel.h */,
+				615B3B831DE4A93E00C1C477 /* FDATableControllerAbstractModel.m */,
+			);
+			name = FDATableViewModel;
+			sourceTree = "<group>";
+		};
+		615B3B781DE4857900C1C477 /* FDATableFetchModel */ = {
+			isa = PBXGroup;
+			children = (
+				615B3B7E1DE49C9B00C1C477 /* FDATableFetchModel.h */,
+				615B3B7F1DE49C9B00C1C477 /* FDATableFetchModel.m */,
+			);
+			name = FDATableFetchModel;
+			sourceTree = "<group>";
+		};
+		615B3B791DE4859400C1C477 /* FDATableSavedRecordsModel */ = {
+			isa = PBXGroup;
+			children = (
+				615B3B7B1DE4877100C1C477 /* FDATableViewSavedRecordsModel.h */,
+				615B3B7C1DE4877100C1C477 /* FDATableViewSavedRecordsModel.m */,
+			);
+			name = FDATableSavedRecordsModel;
+			sourceTree = "<group>";
+		};
 		61DFD6011DE3219200CC157F /* FDAStoryboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +254,8 @@
 		61DFD6021DE321B100CC157F /* FDATableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				615B3B771DE4855F00C1C477 /* FDATableViewModel */,
+				61DFD6131DE32F8B00CC157F /* FDATableViewCell */,
 				61DFD6071DE32ADA00CC157F /* FDATableViewController.h */,
 				61DFD6081DE32ADA00CC157F /* FDATableViewController.m */,
 			);
@@ -226,6 +269,15 @@
 				61DFD6051DE32A7E00CC157F /* FDAEditViewController.m */,
 			);
 			name = FDAEditViewController;
+			sourceTree = "<group>";
+		};
+		61DFD6131DE32F8B00CC157F /* FDATableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				61DFD6141DE32FE500CC157F /* FDATableViewCell.h */,
+				61DFD6151DE32FE500CC157F /* FDATableViewCell.m */,
+			);
+			name = FDATableViewCell;
 			sourceTree = "<group>";
 		};
 		C5CB26D07B1897CD3C3B77D1 /* Pods */ = {
@@ -443,7 +495,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6141A3FB1DD323CA00372007 /* FriendsDemo.xcdatamodeld in Sources */,
+				615B3B801DE49C9B00C1C477 /* FDATableFetchModel.m in Sources */,
 				6141A4301DD34D6200372007 /* FDADataFetchManager.m in Sources */,
+				615B3B7D1DE4877100C1C477 /* FDATableViewSavedRecordsModel.m in Sources */,
 				61DFD6091DE32ADA00CC157F /* FDATableViewController.m in Sources */,
 				61DFD6061DE32A7E00CC157F /* FDAEditViewController.m in Sources */,
 				6141A42A1DD33FD400372007 /* FDAFriend+CoreDataClass.m in Sources */,
@@ -451,6 +505,8 @@
 				6141A3EF1DD323CA00372007 /* main.m in Sources */,
 				6141A41B1DD32A5C00372007 /* FDASavedDataManager.m in Sources */,
 				6141A42C1DD33FD400372007 /* FDAFriend+CoreDataProperties.m in Sources */,
+				61DFD6161DE32FE500CC157F /* FDATableViewCell.m in Sources */,
+				615B3B841DE4A93E00C1C477 /* FDATableControllerAbstractModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,12 @@
 
 @interface FDAEditViewController ()
 
+@property (nonatomic, weak) IBOutlet UIImageView *userPhotoImage;
+@property (nonatomic, weak) IBOutlet UITextField *firstNameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *lastNameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *mailTextField;
+@property (nonatomic, weak) IBOutlet UITextField *phoneTextField;
+
 @end
 
 @implementation FDAEditViewController

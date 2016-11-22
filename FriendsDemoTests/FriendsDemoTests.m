@@ -7,11 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <CoreData/CoreData.h>
+#include <CoreData/CoreData.h>
 #import "FDASavedDataManager.h"
-
-#import "FDAFriend+CoreDataProperties.h"
 #import "FDAFriend+CoreDataClass.h"
+#import "FDAFriend+CoreDataProperties.h"
 
 @interface FriendsDemoTests : XCTestCase
 
@@ -43,19 +42,13 @@
                                                                      phoneNumber:self.friendData[@"phone"]
                                                                         andPhoto:testPhotoData], @"Data inserting");
   
-    
-    
 }
 
 - (void) testFriendFetching {
     NSArray *fetchedFriends = [self fetchFriendsData];
     XCTAssert([fetchedFriends count], @"Fetching filed");
     XCTAssert([fetchedFriends count] > 1, @"Wrong friends count");
-    
-    id testFriend = [fetchedFriends lastObject];
-    
-    XCTAssert([testFriend isKindOfClass:[FDAFriend class]] , @"Fetched object is not FDAFriend");
-    
+    XCTAssert([[fetchedFriends lastObject] isKindOfClass:[NSManagedObjectContext class]], @"Wrong class");
     
 }
 
@@ -73,10 +66,10 @@
     FDAFriend* testFriend = [[self fetchFriendsData] lastObject];
     BOOL isCorrect = YES;
     
-    if (![[testFriend firstName] isEqualToString:self.friendData[@"firstName"]]) { isCorrect = NO; }
-    if (![[testFriend lastName] isEqualToString:self.friendData[@"lastName"]]) { isCorrect = NO; }
-    if (![[testFriend phone] isEqualToString:self.friendData[@"phone"]]) { isCorrect = NO; }
-    if (![[testFriend eMail] isEqualToString:self.friendData[@"email"]]) { isCorrect = NO; }
+    if (![testFriend.firstName isEqualToString:self.friendData[@"firstName"]]) { isCorrect = NO; }
+    if (![testFriend.lastName isEqualToString:self.friendData[@"lastName"]]) { isCorrect = NO; }
+    if (![testFriend.phone isEqualToString:self.friendData[@"phone"]]) { isCorrect = NO; }
+    if (![testFriend.eMail isEqualToString:self.friendData[@"email"]]) { isCorrect = NO; }
     
     XCTAssert(isCorrect, @"Data correcting");
     
