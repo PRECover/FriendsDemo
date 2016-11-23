@@ -91,6 +91,8 @@
     FDAFriend *friend = self.friendsController.fetchedObjects[indexPath.row];
     UIImage *photo = [UIImage imageWithData:friend.photo];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     cell.name.text = [NSString stringWithFormat:@"%@ %@", [friend.firstName capitalizedString], [friend.lastName capitalizedString]];
     cell.userPhoto.image = photo;
     

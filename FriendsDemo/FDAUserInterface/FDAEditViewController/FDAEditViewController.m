@@ -22,9 +22,9 @@
 @property (nonatomic, weak) IBOutlet UITextField *lastNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *mailTextField;
 @property (nonatomic, weak) IBOutlet UITextField *phoneTextField;
-
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *contentView;
+@property (nonatomic, weak) IBOutlet UIView *photPlaceholder;
 
 @property (nonatomic, weak) UITextField *activeTextField;
 
@@ -75,11 +75,11 @@
     self.userPhotoImage.clipsToBounds = YES;
     self.userPhotoImage.layer.borderWidth = 3;
     self.userPhotoImage.layer.borderColor = [[UIColor whiteColor] CGColor];
-    
+    self.photPlaceholder.backgroundColor = [UIColor clearColor];
     UITapGestureRecognizer *photoTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                action:@selector(p_userPhotoTapAction:)];
 
-    [self.userPhotoImage addGestureRecognizer:photoTap];
+    [self.photPlaceholder addGestureRecognizer:photoTap];
 
 }
 
@@ -106,6 +106,7 @@
 }
 
 - (void) p_setupData {
+    self.title = @"Details";
     self.userPhotoImage.image = [UIImage imageWithData:self.friendForEditing.photo];
     self.firstNameTextField.text = [self.friendForEditing.firstName capitalizedString];
     self.lastNameTextField.text = [self.friendForEditing.lastName capitalizedString];
