@@ -183,18 +183,10 @@
         if(![backgroundContext save:&savingError]){
             //handle error
             NSLog(@"Saving error. Object %@ was not saved", newFriend);
-            abort();        }
+            abort();
+        }
         
-        [self.mainContext performBlock:^{
-            NSError* savingError;
-            if(![self.mainContext save:&savingError]) {
-                //handle error
-                NSLog(@"Saving error. Object %@ was not saved", newFriend);
-                abort();
-            }
-            
-        }];
-        
+        [self saveMainContext];
 
     }];
     
@@ -215,21 +207,14 @@
             NSLog(@"Editing error. Changes in object %@ was not saved", friend);
             abort();
         }
-        
-        
-        [self.mainContext performBlock:^{
-            NSError *savingError;
-            if(![self.mainContext save:&savingError]){
-                NSLog(@"Editing error. Changes in object %@ was not saved", friend);
-                abort();
-                
-            }
-        }];
+
+        [self saveMainContext];
         
     }];
     
     return YES;
 }
+
 
 - (NSFetchRequest*) friendsFetchRequest {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"FDAFriend"];

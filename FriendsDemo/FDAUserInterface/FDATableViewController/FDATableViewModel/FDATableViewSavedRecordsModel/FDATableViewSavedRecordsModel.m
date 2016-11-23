@@ -91,14 +91,12 @@
     FDAFriend *friend = self.friendsController.fetchedObjects[indexPath.row];
     UIImage *photo = [UIImage imageWithData:friend.photo];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.name.text = [NSString stringWithFormat:@"%@ %@", friend.firstName, friend.lastName];
+    cell.name.text = [NSString stringWithFormat:@"%@ %@", [friend.firstName capitalizedString], [friend.lastName capitalizedString]];
     cell.userPhoto.image = photo;
     
 }
 
 #pragma mark UITableViewDelegate protocol implementation
-
--(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

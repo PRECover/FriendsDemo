@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class FDAFriend;
+
 @interface FDAEditViewController : UIViewController
+
+@property (nonatomic, strong, readwrite) FDAFriend* friendForEditing;
 
 @end

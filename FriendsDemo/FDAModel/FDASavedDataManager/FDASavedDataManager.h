@@ -30,7 +30,7 @@
                           phoneNumber:(NSString*)phone
                              andPhoto:(NSData*)photoBinary;
 
-- (BOOL) deleteFriend:(FDAFriend*)friendForDeleting; //note 1: I don't know why, but word "friend" marked as reserved.
+- (BOOL) deleteFriend:(FDAFriend*)friendForDeleting;
 - (NSFetchedResultsController*)savedFriendsController;
 - (NSFetchRequest*) friendsFetchRequest;
 

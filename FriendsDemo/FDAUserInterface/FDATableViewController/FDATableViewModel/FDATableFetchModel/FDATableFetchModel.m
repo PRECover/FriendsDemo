@@ -120,14 +120,17 @@
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     cell.accessoryType = [self.checkedUsers containsObject:indexPath]? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     
-    cell.name.text = [NSString stringWithFormat:@"%@ %@", userData[@"name"][@"first"], userData[@"name"][@"last"]];
+    NSString *firstName = userData[@"name"][@"first"];
+    NSString *lastName = userData[@"name"][@"last"];
+    
+    cell.name.text = [NSString stringWithFormat:@"%@ %@", [firstName capitalizedString], [lastName capitalizedString]];
     
     UIImage* emptyPhoto = [UIImage imageNamed:@"noPhoto"];
     cell.userPhoto.image = emptyPhoto;
     
     [self.fetchManager downloadUserPhotoFromURL:userData[@"picture"][@"medium"] withCompletion:^(NSData *data) {
         
-        [_cache setObject:data forKey:userData[@"picture"][@"medium"]];
+        [_cache setObject:data forKey:userData[@"picture"][@"large"]];
         UIImage *image = [UIImage imageWithData:data];
         cell.userPhoto.image = image;
         

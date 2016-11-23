@@ -7,6 +7,7 @@
 //
 
 #import "FDATableViewController.h"
+#import "FDAEditViewController.h"
 #import "FDATableViewSavedRecordsModel.h"
 #import "FDATableFetchModel.h"
 
@@ -14,6 +15,8 @@
 
 @property (nonatomic, weak, readwrite) IBOutlet UITableView *usersTable;
 @property (nonatomic, strong) FDATableControllerAbstractModel* model;
+
+@property (nonatomic, strong) FDAFriend* friendForEditing;
 
 @end
 
@@ -102,17 +105,25 @@
 #pragma mark FDATableViewSavedRecordsModelDelegate protocol implementation
 
 - (void) FDA_friendDidSelected:(FDAFriend *)friendForEditing{
-    //TODO: - Push to FDAFriendEditVC
+    self.friendForEditing = friendForEditing;
+    [self performSegueWithIdentifier:@"showFriendDetail" sender:self];
+    
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.destinationViewController isKindOfClass:[FDAEditViewController class]]){
+        FDAEditViewController *editViewController = segue.destinationViewController;
+        editViewController.friendForEditing = self.friendForEditing;
+        self.friendForEditing = nil;
+    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
