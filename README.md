@@ -22,7 +22,7 @@ iOS Simulator - iPhone 7 Plus, 10.0
 
 # Installing
 1. Download from the GitHub
-2. Open directory from console and excequte "pod install"
+2. Open directory from console and execute "pod install"
 3. Open FriendsDemo.workspace in XCode 8.0 or higher
 4. Choose iPhone simulator
 5. Click Product -> Run
