@@ -20,6 +20,7 @@
 
 @end
 
+
 @implementation FDATableViewController
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -41,12 +42,6 @@
 
     // Do any additional setup after loading the view.
 }
-
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    //[self.model loadData];
-}
-
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

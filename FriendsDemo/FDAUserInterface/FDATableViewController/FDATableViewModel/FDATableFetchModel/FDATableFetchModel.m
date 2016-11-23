@@ -10,7 +10,7 @@
 #import "FDADataFetchManager.h"
 #import "FDASavedDataManager.h"
 #import "FDATableViewCell.h"
-#import "FDAFriend+CoreDataProperties.h"
+#import "FDAFriend+CoreDataClass.h"
 
 @interface FDATableFetchModel ()
 

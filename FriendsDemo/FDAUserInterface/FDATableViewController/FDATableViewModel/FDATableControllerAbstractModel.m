@@ -12,8 +12,8 @@
 
 - (instancetype) initWithTableView:(UITableView*)tableView {
     NSAssert(NO, @"Abstract method for owerriding");
-    return nil;
     
+    return nil;
 }
 
 - (void) loadData {
@@ -23,20 +23,20 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSAssert(NO, @"Abstract method for owerriding");
+   
     return 0;
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSAssert(NO, @"Abstract method for owerriding");
-    return 0;
     
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSAssert(NO, @"Abstract method for owerriding");
+   
     return nil;
-
 }
 
 - (void)saveBeforeDissapearing {

@@ -9,7 +9,7 @@
 #import "FDATableViewSavedRecordsModel.h"
 #import "FDATableViewCell.h"
 #import "FDASavedDataManager.h"
-#import "FDAFriend+CoreDataProperties.h"
+#import "FDAFriend+CoreDataClass.h"
 
 @interface FDATableViewSavedRecordsModel () <NSFetchedResultsControllerDelegate>
 

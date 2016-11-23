@@ -10,7 +10,6 @@
 #include <CoreData/CoreData.h>
 #import "FDASavedDataManager.h"
 #import "FDAFriend+CoreDataClass.h"
-#import "FDAFriend+CoreDataProperties.h"
 
 @interface FriendsDemoTests : XCTestCase
 
@@ -48,7 +47,9 @@
     NSArray *fetchedFriends = [self fetchFriendsData];
     XCTAssert([fetchedFriends count], @"Fetching filed");
     XCTAssert([fetchedFriends count] > 1, @"Wrong friends count");
-    XCTAssert([[fetchedFriends lastObject] isKindOfClass:[NSManagedObjectContext class]], @"Wrong class");
+    
+    
+    XCTAssert([[fetchedFriends lastObject] isKindOfClass:[FDAFriend class]], @"Wrong class");
     
 }
 

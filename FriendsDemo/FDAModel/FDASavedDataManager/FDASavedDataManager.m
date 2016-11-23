@@ -7,7 +7,6 @@
 //
 
 #import <CoreData/CoreData.h>
-
 #import "FDASavedDataManager.h"
 #import "FDAFriend+CoreDataClass.h"
 
