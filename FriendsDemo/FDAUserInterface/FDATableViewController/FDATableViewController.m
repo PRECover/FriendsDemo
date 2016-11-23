@@ -56,9 +56,9 @@
 #pragma mark UISetups
 
 - (void) setupTableView {
+    self.usersTable.tableFooterView = [UIView new]; //For removing "empty" cells
     self.usersTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.usersTable.separatorColor = [UIColor whiteColor];
-    
     self.usersTable.backgroundColor = [UIColor colorWithRed:0.518 green:0.016 blue:0.314 alpha:1.00];
 }
 
