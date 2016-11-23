@@ -31,6 +31,8 @@
     return self;
 }
 
+#pragma mark UIViewController life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupData];
@@ -50,6 +52,8 @@
     [super viewWillDisappear:animated];
     [self.model saveBeforeDissapearing];
 }
+
+#pragma mark UISetups
 
 - (void) setupTableView {
     self.usersTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
