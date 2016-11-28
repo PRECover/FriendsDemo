@@ -12,8 +12,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [self layoutIfNeeded];
     self.name.textColor = [UIColor whiteColor];
-    
+
     // Initialization code
 }
 

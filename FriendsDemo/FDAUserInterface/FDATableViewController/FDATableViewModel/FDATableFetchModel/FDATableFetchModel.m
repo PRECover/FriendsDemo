@@ -43,8 +43,9 @@
 {
     self = [super init];
     if (self) {
-        _cache.countLimit = 100;
-        _cache.totalCostLimit = 35 * 1024 * 1024;
+        _cache = [NSCache new];
+        _cache.countLimit = 50;
+        _cache.totalCostLimit = 100 * 1024 * 1024;
     
         _fetchManager = [FDADataFetchManager new];
         _loadedRecords = [NSMutableArray new];
@@ -130,9 +131,10 @@
     
     [self.fetchManager downloadUserPhotoFromURL:userData[@"picture"][@"medium"] withCompletion:^(NSData *data) {
         
-        [_cache setObject:data forKey:userData[@"picture"][@"large"]];
+        [_cache setObject:data forKey:userData[@"picture"][@"medium"]];
         UIImage *image = [UIImage imageWithData:data];
         cell.userPhoto.image = image;
+        
         
     }];
 }
@@ -140,8 +142,9 @@
 - (NSData*) p_cachedPhotoForURLwithString:(NSString*)urlString andIndexPath:(NSIndexPath*)indexPath {
     NSData *photoData = [_cache objectForKey:urlString];
     if (!photoData) {
-        FDATableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        return UIImagePNGRepresentation(cell.userPhoto.image);
+        NSDictionary* userData = self.loadedRecords[indexPath.row];
+        NSURL *photoURL = [NSURL URLWithString:userData[@"picture"][@"medium"]];
+        return [NSData dataWithContentsOfURL:photoURL];
     }
     else {
         return photoData;
